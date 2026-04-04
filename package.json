@@ -17,8 +17,7 @@
   "bugs": {
     "url": "https://github.com/ssbezerra45/teste-ebac-ui/issues"
   },
-  "homepage": "https://github.com/ssbezerra45/teste-ebac-ui#readme",
-  "dependencies": {
-    "cypress": "^15.13.0"
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0"
   }
 }

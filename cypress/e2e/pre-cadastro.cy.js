@@ -8,6 +8,9 @@ describe('Funcionalidade Pré cadastro', () => {
     it('Deve completar o pré-cadastro com sucesso', () => {
         let emailFaker = faker.internet.email()
         let passwordFaker = faker.internet.password()
+        let nomeFaker = faker.person.firstName()
+        let sobrenomeFaker = faker.person.lastName()
+       
       
 
         cy.get('[name="email"]').type(emailFaker)
@@ -15,8 +18,8 @@ describe('Funcionalidade Pré cadastro', () => {
         cy.get('[name="register"]').click()
 
         cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
-        cy.get('[name="account_first_name"]').type('Sergio') 
-        cy.get('[name="account_last_name"]').type('Santos')
+        cy.get('[name="account_first_name"]').type(nomeFaker) 
+        cy.get('[name="account_last_name"]').type(sobrenomeFaker)
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')  
        

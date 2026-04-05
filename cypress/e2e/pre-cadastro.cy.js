@@ -18,7 +18,8 @@ describe('Funcionalidade Pré cadastro', () => {
         cy.get('[name="account_first_name"]').type('Sergio') 
         cy.get('[name="account_last_name"]').type('Santos')
         cy.get('.woocommerce-Button').click()
-        cy.get('[name="save_account_details"]').should('contain', 'Detalhes da conta modificados com sucesso.')
+        cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')  
+       
 
 
 
